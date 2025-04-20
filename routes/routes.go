@@ -38,6 +38,7 @@ func SetupRoutes(router *gin.Engine, db *gorm.DB) {
 				product.POST("/", productController.CreateProduct)
 				product.PUT("/:id", productController.UpdateProduct)
 				product.DELETE("/:id", productController.DeleteProduct)
+				product.POST("/download-file", productController.DownloadProductImageByProductName)
 			}
 
 			// Inventory routes
